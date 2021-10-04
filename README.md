@@ -4,7 +4,7 @@
 
 This is our amazing team: 
 
-** Hoyer Lukas
-    * wirklich
-** Kapl
-## Milestones
+* Lukas Hoyer
+* Michelle Hartl
+* Victoria Pradel
+
