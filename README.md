@@ -13,7 +13,7 @@ This is our amazing team:
 
 This is **bold** and this is is *italics*
 
-![sport](go-healthy.jpg)
+![sport](go-healthy.png)
 
 ## Milestones
 
