@@ -8,3 +8,12 @@ This is our amazing team:
 * Michelle Hartl
 * Victoria Pradel
 
+1. Item1
+2. Item2 
+
+This is **bold** and this is is *italics*
+
+![A Ninja Cat](cat.jpg)
+
+## Milestones
+
