@@ -1,0 +1,167 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.Windows.Threading;
+using WpfCircles.Geometry;
+
+namespace WpfCircles
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        #region Member Variables
+
+        private Line _leftTopToRightBottom;
+        private Line _leftBottomToRightTop;
+
+        private Circle[]  _myCircle;
+
+        private DispatcherTimer _animationTimer;
+
+        #endregion
+
+        #region Constructor
+        public MainWindow()
+        {
+            InitializeComponent();
+			DrawingCanvas.Focus();
+            //_myCircle = new Circle(90,90,120);
+            _myCircle = new Circle[3];
+            _myCircle[0] = new Circle(40, 200, 40, System.Windows.Media.Brushes.White, System.Windows.Media.Brushes.Green, true,true);
+            _myCircle[1] = new Circle(500, 0, 40, System.Windows.Media.Brushes.Black, System.Windows.Media.Brushes.Blue, false,false);
+            _myCircle[2] = new Circle(300, 100, 40, System.Windows.Media.Brushes.Orange, System.Windows.Media.Brushes.Pink,true,false);
+
+            for (int i = 0; i < _myCircle.Length; i++)
+            {
+                _myCircle[i].DrawOnCanvas(DrawingCanvas);
+            }
+          
+
+            // Creating an animation timer
+            _animationTimer = new DispatcherTimer(DispatcherPriority.Render);
+            _animationTimer.Interval = TimeSpan.FromMilliseconds(10);
+            _animationTimer.Tick += OnTimerElapsed;
+        }
+        #endregion
+
+        #region Event handlers
+
+        /// <summary>
+        /// Triggered each 10 milliseconds, as long as the animation timer is enabled
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OnTimerElapsed(object sender, EventArgs e)
+        {
+            for (int i = 0; i < _myCircle.Length; i++)
+            {
+                if (_myCircle[i].DirectionXleft)
+                {
+                    _myCircle[i].X -= 1;
+                    if (_myCircle[i].X < _myCircle[i].Radius*2)
+                    {
+                        _myCircle[i].X = _myCircle[i].Radius*2;
+                        _myCircle[i].DirectionXleft = false;
+                    }
+                } 
+                else
+                {
+                    _myCircle[i].X += 1;
+                    if (_myCircle[i].X > (DrawingCanvas.ActualWidth - _myCircle[i].Radius*2))
+                    {
+                        _myCircle[i].X = DrawingCanvas.ActualWidth - _myCircle[i].Radius*2;
+                        _myCircle[i].DirectionXleft = true;
+                    }
+                }
+                if (_myCircle[i].DirectionYdown)
+                {
+                    _myCircle[i].Y += 1;
+                    if (_myCircle[i].Y > DrawingCanvas.ActualHeight- _myCircle[i].Radius*2)
+                    {
+                        _myCircle[i].Y = DrawingCanvas.ActualHeight - _myCircle[i].Radius*2;
+                        _myCircle[i].DirectionYdown = false;
+                    }
+
+                }
+                else
+                {
+                    _myCircle[i].Y -= 1;
+                    if (_myCircle[i].Y < 0)
+                    {
+                        _myCircle[i].Y = 0;
+                        _myCircle[i].DirectionYdown = true;
+                    }
+                }
+
+            }
+            
+        }
+
+        /// <summary>
+        /// This method is called, whenever the layout of this windows
+        /// needs to be changed (like after starting, on a window resize, ...)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MainWindow_LayoutUpdated(object sender, EventArgs e)
+        {           
+            if(_leftBottomToRightTop == null)
+            {
+                _leftTopToRightBottom = new Line();
+                _leftTopToRightBottom.X1 = 0;
+                _leftTopToRightBottom.Y1 = 0;
+                _leftTopToRightBottom.X2 = DrawingCanvas.ActualWidth;
+                _leftTopToRightBottom.Y2 = DrawingCanvas.ActualHeight;
+                //_leftTopToRightBottom.Stroke = Brushes.Green;
+                DrawingCanvas.Children.Add(_leftTopToRightBottom);
+
+                _leftBottomToRightTop = new Line();
+                _leftBottomToRightTop.X1 = 0;
+                _leftBottomToRightTop.Y1 = DrawingCanvas.ActualHeight;
+                _leftBottomToRightTop.X2 = DrawingCanvas.ActualWidth;
+                _leftBottomToRightTop.Y2 = 0;
+                //_leftBottomToRightTop.Stroke = Brushes.Purple;
+                DrawingCanvas.Children.Add(_leftBottomToRightTop);
+            }
+            // For resizing the lines later ...
+            //else
+            //{
+            //    _lefttoptorightbottom.x2 = drawingcanvas.actualwidth;
+            //    _lefttoptorightbottom.y2 = drawingcanvas.actualheight;
+            //    _leftbottomtorighttop.y1 = drawingcanvas.actualheight;
+            //    _leftbottomtorighttop.x2 = drawingcanvas.actualwidth;
+            //}
+        }
+
+        /// <summary>
+        /// This method is called on any key press inside the window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OnKeyDown(object sender, KeyEventArgs e)
+        {
+            if (_animationTimer.IsEnabled)
+            {
+                _animationTimer.Stop();
+            }
+            else
+            {
+                _animationTimer.Start();
+            }      
+        }
+        #endregion
+    }
+}
