@@ -2,3 +2,10 @@
     width: 15%;
     height: 12%;
 }
+.background {
+    background-color: #E9E1FC;
+}
+
+.header {
+    text-decoration: darkblue;
+}
