@@ -1,11 +1,10 @@
-
-.color-background{
-    background-color: grey;
+.background{
+    background-color: #DFF2FD;
 }
 
 .color-innen{
     background-color: white;
-    
+    margin-bottom: 30px;
 }
 
 .picture{
@@ -16,9 +15,9 @@
 }
 
 .margin{
-    margin-top: 20px;
-    margin-right: 20px;
     margin-left: 20px;
-    border-bottom-width: 20px;
+    margin-right: 20px;
     margin-bottom: 20px;
+    margin-top: 10px;
+ 
 }
