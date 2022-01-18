@@ -1,5 +1,5 @@
 .background{
-    background-color: #F8C8DC;
+    background-color: #ffe5ec;
 }
 
 .color-innen{
@@ -18,5 +18,10 @@
     margin-bottom: 30px;
     width: 542px;
     height: 347px;
+}
+
+.pictureSingleLeg{
+    width: 20%;
+    height: 20%;
 }
 
