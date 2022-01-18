@@ -1,9 +1,15 @@
-.color-background{
-    background-color: grey;
+.background{
+    background-color: rgb(207, 120, 200);
 }
 
 .color-innen{
     background-color: white;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-bottom-width: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
     
 }
 
@@ -14,10 +20,3 @@
     height: 347px;
 }
 
-.margin{
-    margin-top: 20px;
-    margin-right: 20px;
-    margin-left: 20px;
-    border-bottom-width: 20px;
-    margin-bottom: 20px;
-}
