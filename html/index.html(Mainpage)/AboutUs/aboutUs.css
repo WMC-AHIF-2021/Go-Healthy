@@ -13,25 +13,27 @@ body {
   
   .column {
     float: left;
-    width: 33.3%;
+    width: 30%;
     margin-bottom: 16px;
     padding: 0 8px;
+    margin-left: 30px;
   }
   
   .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0px 0px 0 rgb(252, 250, 250);
     margin: 8px;
   }
   
   .about-section {
     padding: 50px;
     text-align: center;
-    background-color: white;
-    color: black;
+    background-color: grey;
+    color: white;
   }
   
   .container {
     padding: 0 16px;
+    
   }
   
   .container::after, .row::after {
@@ -44,16 +46,8 @@ body {
     color: grey;
   }
   
-  .button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
+  .backgroundAll{
+    background: grey;
   }
   
   .button:hover {
@@ -72,4 +66,6 @@ body {
       display: block;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;  
   }
