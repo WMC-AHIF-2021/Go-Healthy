@@ -1,3 +1,18 @@
 .disabeld-list{list-style-type: none;}
 .calculator-img{float: right; border-radius: 5px;}
 .paragraph{ text-align: center;}
+.navbarStyle{
+    background-color: gray;
+  }
+  
+  .designHeader{
+      margin-left: 1em;
+  }
+  
+  .logo{
+      width: 12%;
+      height: 9%;
+  }
+  .float{
+      margin-left: 75%;
+  }

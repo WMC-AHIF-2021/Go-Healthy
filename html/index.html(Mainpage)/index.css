@@ -2,15 +2,27 @@
     justify-content: center;
     align-items: center;
 }
-    #footer {
-        position:absolute;
-        bottom:0;
-        width:100%;
-        height:60px;  
-        background: #242526;
-     }
+#footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px;  
+    background: #242526;
+}
 
-     .color{
-         color: white;
-     }
- 
+.navbarStyle{
+    background-color: gray;
+}
+
+.designHeader{
+    margin-left: 1em;
+}
+
+.logo{
+    width: 12%;
+    height: 9%;
+}
+.float{
+    margin-left: 75%;
+}
+
