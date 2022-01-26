@@ -1,7 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-  }
+}
   
   html {
     box-sizing: border-box;
@@ -47,7 +47,7 @@ body {
   }
   
   .backgroundAll{
-    background: grey;
+    background: lightgrey;
   }
   
   .button:hover {
@@ -69,3 +69,19 @@ body {
         margin-top: 20px;
         margin-bottom: 20px;  
   }
+
+.navbarStyle{
+  background-color: gray;
+}
+
+.designHeader{
+    margin-left: 1em;
+}
+
+.logo{
+    width: 12%;
+    height: 9%;
+}
+.float{
+    margin-left: 75%;
+}
