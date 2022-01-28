@@ -20,11 +20,6 @@
     height: 347px;
 }
 
-.pictureSingleLeg{
-    width: 20%;
-    height: 20%;
-}
-
 .navbarStyle{
     background-color: gray;
   }
@@ -39,5 +34,14 @@
   }
   .float{
       margin-left: 75%;
+  }
+
+  .grid-container 
+  {
+       display: grid;
+       grid-template-columns: auto auto;
+       grid-template-rows: auto auto;
+       grid-gap: 10px;
+       padding: 10px;           
   }
   
