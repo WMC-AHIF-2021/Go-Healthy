@@ -5,6 +5,7 @@
 
 .body{
     width: 450px;
+    margin-left: 100px;
 
 }
 
@@ -13,7 +14,7 @@
     margin-top: 30px;
     width: 380px;
     float:right;
-    margin-left:50px
+    margin-right: 200px;
 }
 
 .navbarStyle{
@@ -32,3 +33,14 @@
       margin-left: 75%;
   }
   
+  .buttons{
+    margin-bottom: 80px;
+    width: 226px;
+    height: 64px;
+    padding-top: 15px;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+  }
