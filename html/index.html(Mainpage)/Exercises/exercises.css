@@ -3,18 +3,16 @@
     align-items: center;
 }
 
-.body{
+.bodyMan{
     width: 450px;
-    margin-left: 100px;
-
+    margin-left: 15px;
 }
 
-.bodywoman{
-
-    margin-top: 30px;
+.bodyWoman{
     width: 380px;
+    margin-top: 25px;
     float:right;
-    margin-right: 200px;
+    margin-right: 95px;
 }
 
 .navbarStyle{
@@ -35,9 +33,55 @@
   .grid-container 
   {
        display: grid;
-       grid-template-columns: auto auto;
-       grid-template-rows: auto auto;
+       grid-template-columns: auto auto auto;
+       grid-template-rows: auto auto auto auto;
        grid-gap: 10px;
        padding: 10px;           
   }
+  .body1{
+      grid-row-start: 1;
+      grid-row-end: 5;
+      grid-column-start:1;
+      grid-column-end: 2;
+  }
+  .body2{
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  .button1{
+      margin-top: 7em;
+      background-color: #d6f5d6;
+  }
+  .button2{
+      margin-top: 2.5em;
+      background-color: #DFF2FD;
+  }
+  .button3{
+      margin-top: 3em;
+      background-color: #E9E1FC;
+  }
+  .button4{
+      background-color: #ffe5ec;
+  }
+
+  .button1:hover{
+      font-size: 102.5%;
+      background-color: #b6fdb1 ;
+  }
+
+  .button2:hover{
+    font-size: 102.5%;
+    background-color: #bde7ff ;
+}
+
+.button3:hover{
+    font-size: 102.5%;
+    background-color: #cdbaf8 ;
+}
+.button4:hover{
+    font-size: 102.5%;
+    background-color: #fac0cf ;
+}
 
