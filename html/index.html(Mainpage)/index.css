@@ -41,7 +41,16 @@
 }
 
 .margin{
+    margin-top: 100px;
     margin-left: 50px;
     margin-right: 30px;
 
+}
+.grid-container 
+{
+     display: grid;
+     grid-template-columns: 50% 50% ;
+     grid-template-rows: 70%;
+     grid-gap: 10px;
+     padding: 10px;           
 }
