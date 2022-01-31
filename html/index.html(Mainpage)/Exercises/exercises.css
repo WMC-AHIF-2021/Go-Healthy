@@ -5,7 +5,7 @@
 
 .bodyMan{
     width: 450px;
-    margin-left: 15px;
+    margin-left: 35px;
 }
 
 .bodyWoman{
@@ -30,6 +30,7 @@
   .float{
       margin-left: 75%;
   }
+  
   .grid-container 
   {
        display: grid;
