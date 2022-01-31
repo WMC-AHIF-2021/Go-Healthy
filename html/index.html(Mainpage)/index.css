@@ -24,13 +24,16 @@
 .float{
     margin-left: 75%;
 }
-
-.bild{
-    height: 700px;
+.picture{
+    margin-top: 50px;
+    width: 75%;
+    height: 75%;
 }
 
-.bild2{
-    margin-top: 120px;
+.pictureShort{
+    margin-top: 80px;
+    width: 75%;
+    height: 75%;
 }
 
 .position{
@@ -38,7 +41,16 @@
 }
 
 .margin{
+    margin-top: 100px;
     margin-left: 50px;
     margin-right: 30px;
 
+}
+.grid-container 
+{
+     display: grid;
+     grid-template-columns: 50% 50% ;
+     grid-template-rows: 70%;
+     grid-gap: 10px;
+     padding: 10px;           
 }
