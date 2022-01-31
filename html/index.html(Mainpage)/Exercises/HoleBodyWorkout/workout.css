@@ -44,3 +44,9 @@
        grid-gap: 10px;
        padding: 10px;           
   }
+  .header{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+} 
