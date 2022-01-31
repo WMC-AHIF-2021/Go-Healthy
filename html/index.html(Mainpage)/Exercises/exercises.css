@@ -85,4 +85,10 @@
     font-size: 102.5%;
     background-color: #fac0cf ;
 }
+.header{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
