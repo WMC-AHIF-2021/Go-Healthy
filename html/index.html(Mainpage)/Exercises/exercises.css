@@ -54,17 +54,21 @@
   .button1{
       margin-top: 7em;
       background-color: #d6f5d6;
+      border-color: #b6fdb1;
   }
   .button2{
       margin-top: 2.5em;
       background-color: #DFF2FD;
+      border-color: #bde7ff;
   }
   .button3{
       margin-top: 3em;
       background-color: #E9E1FC;
+      border-color: #cdbaf8;
   }
   .button4{
       background-color: #ffe5ec;
+      border-color: #fac0cf ;
   }
 
   .button1:hover{

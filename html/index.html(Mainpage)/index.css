@@ -52,27 +52,11 @@
      grid-template-columns: 50% 50% ;
      grid-template-rows: 70%;
      grid-gap: 10px;
-     padding: 10px;           
-}
-
-.position0{
-    width: 40%;
-    height: 40%;
-    margin-left: 100px;
-    margin-right: 600px;
-}
-
-.position1{
-    margin-top: -475px;
-    margin-right: 500px;
-}
-
-.position2{
-    margin-top: -535px;
+     padding: 10px;   
+     margin-bottom: 20em;        
 }
 
 .colorButton{
     background-color: lightgray;
-    border:hotpink;
-
+    border-color: darkgrey;
 }
