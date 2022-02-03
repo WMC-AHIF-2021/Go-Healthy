@@ -53,10 +53,26 @@
      grid-template-rows: 70%;
      grid-gap: 10px;
      padding: 10px;   
-     margin-bottom: 20em;        
+     margin-bottom: 10em;        
+}
+.grid-container-cards
+{
+     display: grid;
+     grid-template-columns: auto auto auto;
+     grid-template-rows: auto;
+     grid-gap: 10px;
+     padding: 10px;          
 }
 
 .colorButton{
     background-color: lightgray;
     border-color: darkgrey;
+}
+
+.card-one{
+    width: 22em;
+    margin-left: 5em;
+}
+.card{
+    width: 22em;
 }
