@@ -54,3 +54,25 @@
      grid-gap: 10px;
      padding: 10px;           
 }
+
+.position0{
+    width: 40%;
+    height: 40%;
+    margin-left: 100px;
+    margin-right: 600px;
+}
+
+.position1{
+    margin-top: -475px;
+    margin-right: 500px;
+}
+
+.position2{
+    margin-top: -535px;
+}
+
+.colorButton{
+    background-color: lightgray;
+    border:hotpink;
+
+}
