@@ -96,3 +96,18 @@
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.button5{
+    background-color: #D8F4EF;
+    border-color: #a7f8e9;
+}
+.button5:hover{
+    background-color:  #a7f8e9;
+}
+.button6{
+    background-color: #fdfdb0;
+    border-color: #f8f86b;
+}
+.button6:hover{
+    background-color: #f8f86b;
+}
+
