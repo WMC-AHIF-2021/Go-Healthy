@@ -76,3 +76,31 @@
 .card{
     width: 22em;
 }
+
+
+
+.color1{
+    border-color: #EBD4F0;
+    border-left-width: 10px;
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    margin-bottom: 150px;
+}
+
+.color2{
+    border-color: #E0F2D9;
+    border-left-width: 10px;
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+}
+
+.color3{
+    border-color: #D2E4F3;
+    border-left-width: 10px;
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    margin-bottom: 50px;
+}
