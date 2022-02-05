@@ -24,11 +24,6 @@
 .float{
     margin-left: 75%;
 }
-.picture{
-    margin-top: 50px;
-    width: 75%;
-    height: 75%;
-}
 
 .pictureShort{
     margin-top: 80px;
@@ -41,19 +36,10 @@
 }
 
 .margin{
-    margin-top: 100px;
+    margin-top: 80px;
     margin-left: 50px;
     margin-right: 30px;
 
-}
-.grid-container 
-{
-     display: grid;
-     grid-template-columns: 45% 55% ;
-     grid-template-rows: 70%;
-     grid-gap: 10px;
-     padding: 10px;   
-     margin-bottom: 10em;        
 }
 .grid-container-cards
 {
@@ -103,4 +89,28 @@
     border-right-width: 10px;
     border-bottom-width: 10px;
     margin-bottom: 50px;
+}
+
+.picture{
+    width: 3em;
+    height: 3em;
+}
+
+#linearGradient{
+    background-image: linear-gradient(to bottom, #d6f5d6, #DFF2FD, #E9E1FC, #ffe5ec);
+    height: 43.5em;
+}
+.header{
+    position: absolute;
+    margin-top: 2.5em;
+    margin-left: 9em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3.5em;
+}
+.introduction{
+    position: absolute;
+    margin-top: 24em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 10em;
+    text-align: center;
 }
