@@ -1,0 +1,110 @@
+.centration{display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bodyMan{
+    width: 450px;
+    margin-left: 35px;
+}
+
+.bodyWoman{
+    width: 380px;
+    margin-top: 25px;
+    float:right;
+    margin-right: 95px;
+}
+.navbarStyle{
+    background-color: gray;
+}
+.designHeader{
+    margin-left: 1em;
+}
+.logo{
+    width: 12%;
+    height: 9%;
+}
+.float{
+    margin-left: 75%;
+}
+
+  .grid-container 
+  {
+       display: grid;
+       grid-template-columns: auto auto auto;
+       grid-template-rows: auto auto auto auto;
+       grid-gap: 10px;
+       padding: 10px;           
+  }
+  .body1{
+      grid-row-start: 1;
+      grid-row-end: 5;
+      grid-column-start:1;
+      grid-column-end: 2;
+  }
+  .body2{
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  .button1{
+      margin-top: 7em;
+      background-color: #d6f5d6;
+      border-color: #b6fdb1;
+  }
+  .button2{
+      margin-top: 2.5em;
+      background-color: #DFF2FD;
+      border-color: #bde7ff;
+  }
+  .button3{
+      margin-top: 3em;
+      background-color: #E9E1FC;
+      border-color: #cdbaf8;
+  }
+  .button4{
+      background-color: #ffe5ec;
+      border-color: #fac0cf ;
+  }
+
+  .button1:hover{
+      font-size: 102.5%;
+      background-color: #b6fdb1 ;
+  }
+
+  .button2:hover{
+    font-size: 102.5%;
+    background-color: #bde7ff ;
+}
+
+.button3:hover{
+    font-size: 102.5%;
+    background-color: #cdbaf8 ;
+}
+.button4:hover{
+    font-size: 102.5%;
+    background-color: #fac0cf ;
+}
+.header{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.button5{
+    background-color: #D8F4EF;
+    border-color: #a7f8e9;
+}
+.button5:hover{
+    background-color:  #a7f8e9;
+}
+.button6{
+    background-color: #fdfdb0;
+    border-color: #f8f86b;
+}
+.button6:hover{
+    background-color: #f8f86b;
+}
+

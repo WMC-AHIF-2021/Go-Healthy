@@ -1,0 +1,28 @@
+.disabeld-list{list-style-type: none;}
+.calculator-img{float: right; border-radius: 5px;}
+.paragraph{ text-align: center;}
+.navbarStyle{
+    background-color: gray;
+  }
+  
+  .designHeader{
+      margin-left: 1em;
+  }
+  
+  .logo{
+      width: 12%;
+      height: 9%;
+  }
+  .float{
+      margin-left: 75%;
+  }
+  .header{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.color{
+    background: lightgrey;
+}
