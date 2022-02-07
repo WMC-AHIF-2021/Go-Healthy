@@ -9,7 +9,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      REDIRECT_URL: https://wmc-ahif-2021.github.io/Kipper-Web/
+      REDIRECT_URL: https://wmc-ahif-2021.github.io/Go-Healthy
       PACKAGE_JSON: https://gist.githubusercontent.com/Luna-Klatzer/1a099c115498fbdf01a6c4a749ceb2d5/raw/d4c58fe3e3de74bc0f08683362584854b422ade2/package.json
       UPDATE_SCRIPT: https://gist.githubusercontent.com/Luna-Klatzer/a6f57a7ad7d79dc0a90115846cc98945/raw/756317baa73c904e3c2afef8cd10f3509dfc8dea/insert-html-banner.py
       SCRIPT_FILE_NAME: insert-html-banner.py
@@ -29,7 +29,7 @@ jobs:
         run: sudo apt-get install tree
       - name: Installs dependencies
         run: |
-          curl ${{ env.PACKAGE_JSON }} > package.json
+          curl ${{ env.PACKAGE_JSON }} > ./package.json
           npm i
       - name: Download Update Script
         run: curl ${{ env.UPDATE_SCRIPT }} > ${{ env.SCRIPT_FILE_NAME }}
