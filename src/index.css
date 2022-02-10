@@ -15,7 +15,7 @@
     height: 9%;
 }
 .float{
-    margin-left: 75%;
+    margin-left: 67%;
 }
 
 .pictureShort{
@@ -24,11 +24,11 @@
     height: 75%;
 }
 
-.position{
+.positionIndex{
     right: 600px;
 }
 
-.margin{
+.marginIndex{
     margin-top: 80px;
     margin-left: 50px;
     margin-right: 30px;
@@ -84,7 +84,7 @@
     margin-bottom: 50px;
 }
 
-.picture{
+.pictureIndex{
     width: 3em;
     height: 3em;
 }
@@ -93,14 +93,14 @@
     background-image: linear-gradient(to bottom, #d6f5d6, #DFF2FD, #E9E1FC, #ffe5ec);
     height: 43.5em;
 }
-.header{
+.headerIndex{
     position: absolute;
     margin-top: 2.5em;
     margin-left: 9em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 3.5em;
 }
-.introduction{
+.introductionIndex{
     position: absolute;
     margin-top: 24em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
