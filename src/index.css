@@ -6,7 +6,10 @@
 .navbarStyle{
     background-color: gray;
 }
-
+.backgroundAll{
+    background-image: linear-gradient(to bottom, #d6f5d6, #DFF2FD, #E9E1FC, #ffe5ec);
+    height: 100%;
+}
 .designHeader{
     margin-left: 1em;
 }
