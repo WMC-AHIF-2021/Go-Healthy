@@ -7,7 +7,14 @@
             <link rel="stylesheet" href="calCalculator.css">
             <link rel="stylesheet" href="../index.css">
             <link href="../pictures/goHealthy.png" rel="shortcut icon">
+            <script src="kcal-calculator.js"></script>
         </head>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                checksum();
+            });
+        </script>
         
         <body class="color">
             <section >
@@ -39,60 +46,117 @@
               </article>
             </section>
             <section>
-             <article>
-              <h1 class="header">Calorien-Calculator</h1>
-                <p class="paragraph"><br> Please enter the following data correctly, so that we can provide you with an accurate result.</p>                  
-              </article>
+                <article>
+                    <h1 class="header">Calculate Daily Energy Consumption</h1>
+                    <p class="paragraph"><br> Please enter the following data correctly, so that we can provide you with an accurate result.</p>
+                </article>
 
-              <article>
-                  <ul class="disabeld-list">
-                      <img src = "../pictures/calculator.png" alt="calculator img" class="calculator-img"> 
-                      <form class="row g-3">
-                   
-                          <li>
-                              <div class="col-md-5">
-                                  <label for="validationDefault01" class="form-label">First name</label>
-                                  <input type="text" class="form-control" id="validationDefault01"  required>
+                <article>
+                    <ul class="disabeld-list">
+                        <img src = "../pictures/calculator.png" alt="calculator img" class="calculator-img">
+                        <form class="row g-3">
+                            <h4>Basis Information</h4>
+                            <li>
+                                <label for="selGender" class="form-label">Gender</label>
+                                <select class="form-select" aria-label="Gender" id="selGender">
+                                    <option value="1">Male</option>
+                                    <option value="2">Female</option>
+                                </select>
+                            </li>
+                            <li>
+                                <div class="col-md-5">
+                                    <label for="inAge" class="form-label">Age</label>
+                                    <input type="text" class="form-control" id="inAge" required>
                                 </div>
-                          </li>
-                          <li>
-                              <div class="col-md-5">
-                                  <label for="validationDefault02" class="form-label">Last name</label>
-                                  <input type="text" class="form-control" id="validationDefault02" required>
+                            </li>
+                            <li>
+                                <div class="col-md-5">
+                                    <label for="inHeight" class="form-label">Height (in cm)</label>
+                                    <input type="text" class="form-control" id="inHeight" required>
                                 </div>
-                          </li>
-                          <li>
-                              <div class="col-md-5">
-                                  <label for="validationDefault05" class="form-label">Age</label>
-                                  <input type="text" class="form-control" id="validationDefault05" required>
+                            </li>
+                            <li>
+                                <div class="col-md-5">
+                                    <label for="inWeight" class="form-label">Weight (in kg)</label>
+                                    <input type="text" class="form-control" id="inWeight" required>
                                 </div>
-                          </li>
-                          <li>
-                              <div class="col-md-5">
-                                  <label for="validationDefault03" class="form-label">Height(cm)</label>
-                                  <input type="text" class="form-control" id="validationDefault03" required>
+                            </li>
+                            <li>
+                                <h4>Activities in hours per day</h4>
+                            </li>
+                            <li>
+                                <div class="col-md-5">
+                                    <label for="inHoursSleep" class="form-label">Sleep (0.95)</label>
+                                    <input type="text" class="form-control" id="inHoursSleep" onchange="checksum()" value="8" required>
                                 </div>
-                          </li>
-                          <li>
-                              <div class="col-md-5">
-                                  <label for="validationDefault04" class="form-label">Weight(kg)</label>
-                                  <input type="text" class="form-control" id="validationDefault04" required>
-                               </div>
-                          </li>
-                          <li>
-                            <div class="mb-3 form-check">
-                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                              <label class="form-check-label" for="exampleCheck1">build muscles</label>
+                            </li>
+                            <li>
+                                <div class="col-md-5">
+                                    <label for="inHoursSitting" class="form-label">Only Sitting or lying (1.2)</label>
+                                    <input type="text" class="form-control" id="inHoursSitting" onchange="checksum()" required>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-md-5">
+                                    <label for="inHoursSitLow" class="form-label">Sitting low activity (1.5)</label>
+                                    <input type="text" class="form-control" id="inHoursSitLow" onchange="checksum()" required>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-md-5">
+                                    <label for="inHoursSitWalk" class="form-label">Sitting, walking or upright (1.7)</label>
+                                    <input type="text" class="form-control" id="inHoursSitWalk" onchange="checksum()" value="16" required>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-md-5">
+                                    <label for="inHoursWalk" class="form-label">Mainly upright and walking (1.9)</label>
+                                    <input type="text" class="form-control" id="inHoursWalk" onchange="checksum()" required>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-md-5">
+                                    <label for="inHoursWork" class="form-label">Hard Work or Sport (2.4)</label>
+                                    <input type="text" class="form-control" id="inHoursWork" onchange="checksum()" required>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-md-5">
+                                    <label class="form-label" id="lbError"></label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-md-5">
+                                    <button type="button" class="btn btn-primary" onclick="calculateEnergyConsumption()">Calculate</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card">
+                                    <h5 class="card-header">Result</h5>
+                                    <div class="card-body">
+                                        <h5 class="card-title">The calculated daily energy consumption in kcal is</h5>
+                                        <p class="card-text">
+                                            <input type="text" class="form-control" id="inEnergy" style="background-color: yellowgreen;">
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </li>
+                        </form>
+                        </br></br>
+                        <div class="card w-50">
+                            <div class="card-body" style ="background-color: khaki">
+                                <h5 class="card-title">Further Information</h5>
+                                <p class="card-text">The basis daily energy consumption (also called basal metabolic rate (BMR)) is
+                                    calculated with the Harris-Benedict-Equation.
+                                    See <a href = "https://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation">here </a> for more information.
+                                    </br>
+                                    The physical activity level is added to the BMR and calculated as described <a href ="https://en.wikipedia.org/wiki/Physical_activity_level"> here.</a></a>
+                                </p>
                             </div>
-                            <div class="mb-3 form-check">
-                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                              <label class="form-check-label" for="exampleCheck1">decrease weight</label>
-                            </div>
-                          </li>                        
-                      </form>
-                  </ul>                     
-              </article>
+                        </div>
+                    </ul>
+                </article>
             </section>
-
       </body>
 </html>
