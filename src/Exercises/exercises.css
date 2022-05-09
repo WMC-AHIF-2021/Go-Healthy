@@ -1,11 +1,11 @@
 .bodyMan{
-    width: 450px;
+    width: 70%;
     margin-left: 35px;
 }
 
 .bodyWoman{
-    width: 380px;
-    margin-top: 25px;
+    width: 60%;
+    margin-top: 2%;
     float:right;
     margin-right: 95px;
 }
