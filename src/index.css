@@ -9,16 +9,14 @@
 .backgroundAll{
     background-image: linear-gradient(to bottom, #d6f5d6, #DFF2FD, #E9E1FC, #ffe5ec);
     height: 100%;
+    width: 100%;
 }
 .designHeader{
-    margin-left: 1em;
+    margin-left: 2%;
 }
-.logo{
-    width: 12%;
-    height: 9%;
-}
+
 .float{
-    margin-left: 67%;
+    margin-left: auto;
 }
 
 .pictureShort{
@@ -95,6 +93,7 @@
 #linearGradient{
     background-image: linear-gradient(to bottom, #d6f5d6, #DFF2FD, #E9E1FC, #ffe5ec);
     height: 43.5em;
+    width: auto;
 }
 .headerIndex{
     position: absolute;
@@ -109,4 +108,12 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-left: 10em;
     text-align: center;
+}
+
+.margin-titel{
+    margin-top: 3.7%;
+}
+
+.margin-header{
+    margin-top: 5.5%;
 }
