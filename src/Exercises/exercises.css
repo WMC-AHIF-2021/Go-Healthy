@@ -1,14 +1,14 @@
 .bodyMan{
-    width: 80%;
-    margin-left: 20%;
+    width: 85%;
+    margin-left: 17%;
     margin-top: 5%;
 }
 
 .bodyWoman{
-    width: 80%;
+    width: 85%;
     margin-top: 9%;
     float:right;
-    margin-right: 40%;
+    margin-right: 34%;
 }
   .grid-container 
   {
@@ -30,6 +30,11 @@
     grid-column-start: 3;
     grid-column-end: 4;
   }
+  .button{
+      background-color: white;
+      border-color: white;
+      color: white;
+  }
   .button1{
       margin-top: 7em;
       background-color: #d6f5d6;
@@ -49,7 +54,10 @@
       background-color: #ffe5ec;
       border-color: #fac0cf ;
   }
-
+  
+  .button:hover{
+      color: white;
+  }
   .button1:hover{
       font-size: 102.5%;
       background-color: #b6fdb1 ;
@@ -68,6 +76,8 @@
     font-size: 102.5%;
     background-color: #fac0cf ;
 }
+
+
 .header{
     text-align: center;
     margin-top: 20px;
