@@ -1,5 +1,8 @@
-function checksum():boolean {
-    let inputSleep,inHoursSitting,inHoursSitLow,inHoursWalk,inHoursSitWalk,inHoursWork : number;
+let inputSleep,inHoursSitting,inHoursSitLow,inHoursWalk,inHoursSitWalk,inHoursWork : number;
+let weight, height, age : number;
+let gender : string;
+
+function readFromInputFields() {
     inputSleep = parseFloat((<HTMLInputElement>document.getElementById("inHoursSleep")).value);
     inputSleep = isNaN(inputSleep) ? 0 : inputSleep;
 
@@ -17,9 +20,22 @@ function checksum():boolean {
 
     inHoursWork = parseFloat((<HTMLInputElement>document.getElementById("inHoursWork")).value);
     inHoursWork = isNaN(inHoursWork) ? 0 : inHoursWork;
-    let summe = inputSleep + inHoursSitting + inHoursSitLow + inHoursWalk + inHoursSitWalk + inHoursWork;
-    if (summe != 24.0) {
-        document.getElementById("lbError").innerHTML = "Sum of hours per day must be 24! Current sum is "+summe+"!";
+
+    gender = (<HTMLSelectElement>document.getElementById("selGender")).value;
+
+    weight = parseFloat((<HTMLInputElement>document.getElementById("inWeight")).value);
+
+    height = parseFloat((<HTMLInputElement>document.getElementById("inHeight")).value);
+
+    age = parseFloat((<HTMLInputElement>document.getElementById("inAge")).value);
+
+}
+
+function checksum():boolean {
+    readFromInputFields();
+    let sum = inputSleep + inHoursSitting + inHoursSitLow + inHoursWalk + inHoursSitWalk + inHoursWork;
+    if (sum != 24.0) {
+        document.getElementById("lbError").innerHTML = "Sum of hours per day must be 24! Current sum is "+sum+"!";
         document.getElementById("lbError").style.color = "red";
         return false;
     } else {
@@ -30,53 +46,33 @@ function checksum():boolean {
 }
 
 function calculateEnergyConsumption() {
-    // Read Hour Activity
-    let inputSleep,inHoursSitting,inHoursSitLow,inHoursWalk,inHoursSitWalk,inHoursWork : number;
-    inputSleep = parseFloat((<HTMLInputElement>document.getElementById("inHoursSleep")).value);
-    inputSleep = isNaN(inputSleep) ? 0 : inputSleep;
+    let sum,palFactor:number;
+    let energyConsumption:number = 0;
 
-    inHoursSitting = parseFloat((<HTMLInputElement>document.getElementById("inHoursSitting")).value);
-    inHoursSitting = isNaN(inHoursSitting) ? 0 : inHoursSitting;
+    // Read current inputs
+    readFromInputFields();
 
-    inHoursSitLow = parseFloat((<HTMLInputElement>document.getElementById("inHoursSitLow")).value);
-    inHoursSitLow = isNaN(inHoursSitLow) ? 0 : inHoursSitLow;
-
-    inHoursSitWalk = parseFloat((<HTMLInputElement>document.getElementById("inHoursSitWalk")).value);
-    inHoursSitWalk = isNaN(inHoursSitWalk) ? 0 : inHoursSitWalk;
-
-    inHoursWalk = parseFloat((<HTMLInputElement>document.getElementById("inHoursWalk")).value);
-    inHoursWalk = isNaN(inHoursWalk) ? 0 : inHoursWalk;
-
-    inHoursWork = parseFloat((<HTMLInputElement>document.getElementById("inHoursWork")).value);
-    inHoursWork = isNaN(inHoursWork) ? 0 : inHoursWork;
-    let summe = inputSleep + inHoursSitting + inHoursSitLow + inHoursWalk + inHoursSitWalk + inHoursWork;
-    let palFactor = (inputSleep*0.95+inHoursSitting*1.2+inHoursSitLow*1.5+inHoursSitWalk*1.7+inHoursWalk*1.9+inHoursWork*2.4)/(summe);
-
-    let gender = (<HTMLSelectElement>document.getElementById("selGender")).value;
-
-    let weight, height, energyConsumption = 0, age;
-
-    weight = parseFloat((<HTMLInputElement>document.getElementById("inWeight")).value);
     if (isNaN(weight) || (weight <0)) {
         alert("Weight must not be empty and a valid positive number!");
         return;
     }
 
-    height = parseFloat((<HTMLInputElement>document.getElementById("inHeight")).value);
     if (isNaN(height)|| (height <0)) {
         alert("Height must not be empty and a valid positive number!");
         return;
     }
-    age = parseFloat((<HTMLInputElement>document.getElementById("inAge")).value);
     if (isNaN(age)|| (age <0)) {
         alert("Age must not be empty and a valid positive number!");
         return;
     }
 
+    sum = inputSleep + inHoursSitting + inHoursSitLow + inHoursWalk + inHoursSitWalk + inHoursWork;
+    palFactor = (inputSleep*0.95+inHoursSitting*1.2+inHoursSitLow*1.5+inHoursSitWalk*1.7+inHoursWalk*1.9+inHoursWork*2.4)/(sum);
+
     if (gender=="1") {
-        energyConsumption = 655.1 + 9.6 *weight + 1.8 * height - 4.7 * age;
+        energyConsumption = (655.1 + 9.6 *weight + 1.8 * height - 4.7 * age)*palFactor;
     } else {
-        energyConsumption = 66.47+13.7*weight+5*height-6.8*age;
+        energyConsumption = (66.47+13.7*weight+5*height-6.8*age)*palFactor;
     }
     (<HTMLInputElement>document.getElementById("inEnergy")).value= energyConsumption.toFixed().toString();
 }
