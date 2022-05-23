@@ -1,14 +1,16 @@
 .bodyMan{
-    width: 85%;
+    width: 88%;
     margin-left: 17%;
     margin-top: 5%;
+    margin-bottom: 10%;
 }
 
 .bodyWoman{
-    width: 85%;
+    width: 88%;
     margin-top: 9%;
     float:right;
     margin-right: 34%;
+    margin-bottom: 15%;
 }
   .grid-container 
   {
