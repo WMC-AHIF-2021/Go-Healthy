@@ -36,7 +36,7 @@ jobs:
       - name: Insert Disclaimer Header
         run: python insert-html-banner.py
       - name: Build Files using Parcel
-        run: parcel build src/index.html --public-url ${{ env.REDIRECT_URL }} --dist-dir .
+        run: parcel build src/index.html --public-url ${{ env.REDIRECT_URL }} --dist-dir . --no-source-maps --no-scope-hoist
       - name: Add Local Identification Config
         run: |
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
