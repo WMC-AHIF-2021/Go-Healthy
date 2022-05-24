@@ -6,10 +6,13 @@
 .navbarStyle{
     background-color: gray;
 }
-.backgroundAll{
+.background{
     background-image: linear-gradient(to bottom, #d6f5d6, #DFF2FD, #E9E1FC, #ffe5ec);
     height: 100%;
     width: 100%;
+}
+html{
+
 }
 .designHeader{
     margin-left: 2%;
@@ -48,7 +51,6 @@
     background-color: lightgray;
     border-color: darkgrey;
 }
-
 .card-one{
     width: 22em;
     margin-left: 5em;
@@ -57,7 +59,6 @@
     width: 70%;
     height: 30% ;
 }
-
 
 
 .color1{
@@ -91,11 +92,6 @@
     height: 3em;
 }
 
-#linearGradient{
-    background-image: linear-gradient(to bottom, #d6f5d6, #DFF2FD, #E9E1FC, #ffe5ec);
-    height: 43.5em;
-    width: auto;
-}
 .headerIndex{
     position: absolute;
     margin-top: 2.5em;
