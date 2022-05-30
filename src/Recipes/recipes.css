@@ -21,3 +21,9 @@
 .float{
     float: right;
 }
+
+body{
+    background-image: linear-gradient(to bottom, #d6f5d6, #DFF2FD, #E9E1FC, #ffe5ec);
+    height: auto;
+    width: auto;
+}

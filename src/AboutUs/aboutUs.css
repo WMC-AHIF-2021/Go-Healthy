@@ -1,8 +1,14 @@
 html{
   background-image: linear-gradient(to bottom, #d6f5d6, #DFF2FD, #E9E1FC, #ffe5ec);
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: auto;
 }
+body{
+  background-image: linear-gradient(to bottom, #d6f5d6, #DFF2FD, #E9E1FC, #ffe5ec);
+  height: auto;
+  width: auto;
+}
+
 .header{
   text-align: center;
   margin-top: 20px;
