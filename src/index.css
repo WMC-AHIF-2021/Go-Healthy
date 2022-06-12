@@ -11,9 +11,6 @@
     height: 100%;
     width: 100%;
 }
-html{
-
-}
 .designHeader{
     margin-left: 2%;
 }
@@ -88,22 +85,25 @@ html{
 }
 
 .pictureIndex{
-    width: 3em;
-    height: 3em;
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 10%;
+    width: 13%;
+    height: 25%;
 }
 
 .headerIndex{
     position: absolute;
-    margin-top: 2.5em;
-    margin-left: 9em;
+    margin-top: 14%;
+    margin-left: 45%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 3.5em;
 }
 .introductionIndex{
     position: absolute;
-    margin-top: 24em;
+    margin-top: 28%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-left: 10em;
+    margin-left: 11%;
     text-align: center;
 }
 
@@ -114,3 +114,14 @@ html{
 .margin-header{
     margin-top: 4.75em;
 }
+.reveal{
+    position: relative;
+    transform: translate(0, 150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+.reveal.active{
+    transform: translate(0, -50px);
+    opacity: 1;
+}
+
