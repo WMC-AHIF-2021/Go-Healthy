@@ -130,7 +130,7 @@
     height: 150px;
     left: 50%;
     top: 50%;
-    animation: jumping 1s ease-in-out infinite;
+    animation: loading 1s ease-in-out infinite;
 }
 #loadingScreenText{
     position: absolute;
@@ -138,10 +138,10 @@
     height: 150px;
     left: 51%;
     top: 71%;
-    animation: jumping 1s ease-in-out infinite;
+    animation: loading 1s ease-in-out infinite;
 }
 
-@keyframes jumping {
+@keyframes loading {
     0% {
         transform: translate(-50%, -50%);    
     }
