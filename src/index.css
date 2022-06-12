@@ -113,3 +113,42 @@
 .margin-header{
     margin-top: 4.75em;
 }
+#loadingScreen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+#loadingScreenImg {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 50%;
+    top: 50%;
+    animation: jumping 1s ease-in-out infinite;
+}
+#loadingScreenText{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 51%;
+    top: 71%;
+    animation: jumping 1s ease-in-out infinite;
+}
+
+@keyframes jumping {
+    0% {
+        transform: translate(-50%, -50%);    
+    }
+    50% {
+        transform: translate(-50%, -75%);
+    }
+    100% {
+        transform: translate(-50%, -50%);   
+    }
+}

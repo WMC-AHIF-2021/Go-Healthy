@@ -1,0 +1,1 @@
+{"version":3,"file":"loadingScreen.js","sourceRoot":"","sources":["../src/scripts/loadingScreen.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,gBAAgB,CAAC,MAAM,EAAE,GAAG,EAAE;IACjC,IAAI,aAAa,GAAG,QAAQ,CAAC,cAAc,CAAC,eAAe,CAAC,CAAC;IAC7D,aAAa,CAAC,KAAK,CAAC,UAAU,GAAG,QAAQ,CAAC;IAC1C,aAAa,CAAC,KAAK,CAAC,OAAO,GAAG,GAAG,CAAC;AACtC,CAAC,CAAC,CAAA"}
