@@ -9,6 +9,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
+      ROOT_BRANCH: master
       REDIRECT_URL: https://wmc-ahif-2021.github.io/Go-Healthy/
       PACKAGE_JSON: https://gist.githubusercontent.com/Luna-Klatzer/1a099c115498fbdf01a6c4a749ceb2d5/raw/cd33260e9fdfc3d32110bae65d2d0058c97c1abe/package.json
       PACKAGE_LOCK_JSON: https://gist.githubusercontent.com/Luna-Klatzer/c5d109f6f9f3e5002546cc1f758f1ee3/raw/3187d7bd182b88b54e61bc42c6f776a78ccfad89/package-lock.json
@@ -45,4 +46,4 @@ jobs:
         run: |
           git add .
           git commit -m "Updated parcel build"
-          git push origin +master:gh-pages --force
+          git push origin +${{ env.ROOT_BRANCH }}:gh-pages --force
