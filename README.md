@@ -1,6 +1,7 @@
 # Go Healthy
  We want to **help** you and **improve yourself with go heathy**.
 >## Description
+>Be stronger than your strongest excuse and start working on yourself with go Healthy. Get your dream body with our calorie calculator and exercises.
 * **Static Part**
      * If you are new to sport, it will **help you to reach** your **physical goals with exercises** and will also **support** you **with a calorien calculater**. 
      * The exercises are splited in four parts.
