@@ -1,0 +1,155 @@
+.centration{display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbarStyle{
+    background-color: gray;
+}
+.background{
+    background-image: linear-gradient(to bottom, #d6f5d6, #DFF2FD, #E9E1FC, #ffe5ec);
+    height: 100%;
+    width: 100%;
+}
+.designHeader{
+    margin-left: 2%;
+}
+
+.float{
+    margin-left: auto;
+}
+
+.pictureShort{
+    margin-top: 80px;
+    width: 75%;
+    height: 75%;
+}
+
+.positionIndex{
+    right: 600px;
+}
+
+.marginIndex{
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-right: 30px;
+
+}
+.grid-container-cards
+{
+     display: grid;
+     grid-template-columns: auto auto auto;
+     grid-template-rows: auto;
+     grid-gap: 10px;
+     padding: 10px;          
+}
+
+.colorButton{
+    background-color: lightgray;
+    border-color: darkgrey;
+}
+.card-one{
+    width: 22em;
+    margin-left: 5em;
+}
+.cards{
+    width: 70%;
+    height: 30% ;
+}
+
+
+.color1{
+    border-color: #EBD4F0;
+    border-left-width: 10px;
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    margin-bottom: 150px;
+}
+
+.color2{
+    border-color: #E0F2D9;
+    border-left-width: 10px;
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+}
+
+.color3{
+    border-color: #D2E4F3;
+    border-left-width: 10px;
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    margin-bottom: 50px;
+}
+
+.pictureIndex{
+    position: absolute;
+    margin-left: 34%;
+    margin-top: 12%;
+}
+
+.headerIndex{
+    position: absolute;
+    margin-top: 14%;
+    margin-left: 45%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3.5em;
+}
+.introductionIndex{
+    position: absolute;
+    margin-top: 25%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 11%;
+    margin-right: auto;
+    text-align: center;
+}
+
+.margin-titel{
+    margin-top: 3.7%;
+}
+
+.margin-header{
+    margin-top: 4.75em;
+}
+#loadingScreen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+#loadingScreenImg {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 50%;
+    top: 50%;
+    animation: loading 1s ease-in-out infinite;
+}
+#loadingScreenText{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 51%;
+    top: 71%;
+    animation: loading 1s ease-in-out infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: translate(-50%, -50%);    
+    }
+    50% {
+        transform: translate(-50%, -75%);
+    }
+    100% {
+        transform: translate(-50%, -50%);   
+    }
+}
+

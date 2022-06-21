@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Quiz</title>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.esm.js" integrity="sha512-YM18yiANXJFpbiOZjLzUrK/lNfTiBcwtTLeAntG4B8dJY+NdUDjxfPNGPEMuOdXlT7U/uT+zbIvbQYAEFog+MA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <link rel="stylesheet" href="https://wmc-ahif-2021.github.io/Go-Healthy/Quiz/quiz.d6ff2bf1.css">
+            <link rel="stylesheet" href="https://wmc-ahif-2021.github.io/Go-Healthy/index.d66388b6.css">
+            <link href="https://wmc-ahif-2021.github.io/Go-Healthy/goHealthy.3cc18cc6.png" rel="shortcut icon">
+            <script src="https://wmc-ahif-2021.github.io/Go-Healthy/Quiz/quiz.7359f0cc.js"></script>
+        </head>
+
+        <body class="color">
+
+<div id="disclaimer-banner" style="display: flex; justify-content: center; background-color: white;">
+    <p style="padding: 0.5rem; font-style: italic; margin: 0;">
+      Educational, non-profit project created by students
+    </p>
+    <a href="https://www.htl-leonding.at/" style="padding: 0.5rem 0; font-style: italic;">
+      @ HTL Leonding.
+    </a>
+</div>
+
+
+            <section>
+                <div class="fixed-top">
+                  <nav class="navbar navbar-expand-lg navbar-light navbarStyle">
+                      <a class="navbar-brand designHeader" href="https://wmc-ahif-2021.github.io/Go-Healthy/index.html">
+                        <img src="https://wmc-ahif-2021.github.io/Go-Healthy/goHealthy.3cc18cc6.png" width="30" height="30" class="d-inline-block align-top" alt="go-healthy">
+                        Go-Healthy
+                      </a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav float">
+                          <li class="nav-item">
+                            <a class="nav-link" href="https://wmc-ahif-2021.github.io/Go-Healthy/Exercises/exercises.html">Exercises</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="https://wmc-ahif-2021.github.io/Go-Healthy/calorieCalcuator/calCalculator.html">cal-Calculator</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="https://wmc-ahif-2021.github.io/Go-Healthy/Recipes/recipes.html">Recipes</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="https://wmc-ahif-2021.github.io/Go-Healthy/AboutUs/aboutUs.html">About us</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="https://wmc-ahif-2021.github.io/Go-Healthy/Quiz/quiz.html">Quiz</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </nav>
+              </div>   
+            </section>
+
+<!-- Article -->
+<section>
+    <div class="container text-center">
+        <div class="card border-0 shadow my-5">
+            <div class="card-body p-5">
+                <div class="container">
+
+                    <h1 class="h1-big">What sport suits me the most?</h1>
+
+                    <form action="javascript:void(0);" onsubmit="result();" class="horizontalLine" name="sport">
+                        <br> <hr>
+                        <h3>What's your favourite sport to watch? <br><br></h3>
+                        <img class="survey-img survey-img-left" src="https://wmc-ahif-2021.github.io/Go-Healthy/soccer.96e851ea.webp">
+                        <img class="survey-img" src="https://wmc-ahif-2021.github.io/Go-Healthy/basketball.d9e6caec.jpg"><br>
+                        <input class="radio-btn-survey checkmark" type="radio" id="favourite" name="favourite" value="1" checked="checked">
+                        <input class="radio-btn-survey checkmark" type="radio" id="favourite" name="favourite" value="2"><br>
+                        <img class="survey-img survey-img-left" src="https://wmc-ahif-2021.github.io/Go-Healthy/tennis.c0b2c1b3.webp">
+                        <img class="survey-img" src="https://wmc-ahif-2021.github.io/Go-Healthy/golf.ccb76ff0.jpg">
+                        <input class="radio-btn-survey checkmark" type="radio" id="favourite" name="favourite" value="3">
+                        <input class="radio-btn-survey checkmark" type="radio" id="favourite" name="favourite" value="4">
+                        <br> <br> <hr> <br>
+                        <h3>Are you competitive?<br><br></h3>
+                        <input class="checkmark" type="radio" id="personality" name="personality" value="1" checked="checked">
+                        <label for="1">All the time.</label><br>
+                        <input class="checkmark" type="radio" id="personality" name="personality" value="2">
+                        <label for="2">Sort of...</label><br>
+                        <input class="checkmark" type="radio" id="personality" name="personality" value="3">
+                        <label for="3">Often...</label><br>
+                        <input class="checkmark" type="radio" id="personality" name="personality" value="4">
+                        <label for="4">Not really...</label><br>
+                        <br> <br> <hr> <br>
+                        <h3>How many players do you want on your field with you?<br><br></h3>
+                        <img class="survey-img survey-img-left" src="https://wmc-ahif-2021.github.io/Go-Healthy/soccereleven.4b4a5091.jpg">
+                        <img class="survey-img" src="https://wmc-ahif-2021.github.io/Go-Healthy/basketballtwelve.87b96da5.jpg"><br>
+                        <input class="radio-btn-survey checkmark" type="radio" id="place" name="place" value="1" checked="checked">
+                        <input class="radio-btn-survey checkmark" type="radio" id="place" name="place" value="2"><br>
+                        <img class="survey-img survey-img-left" src="https://wmc-ahif-2021.github.io/Go-Healthy/tennistwo.cf97628a.jpg">
+                        <img class="survey-img" src="https://wmc-ahif-2021.github.io/Go-Healthy/golfone.a38020dd.jpg">
+                        <input class="radio-btn-survey checkmark" type="radio" id="place" name="place" value="3">
+                        <input class="radio-btn-survey checkmark" type="radio" id="place" name="place" value="4">
+                        <br> <br> <hr> <br>
+                        <h3>Do you enjoy running?<br><br></h3>
+                        <input class="checkmark" type="radio" id="time" name="time" value="1" checked="checked">
+                        <label for="1">I love running</label><br>
+                        <input class="checkmark" type="radio" id="time" name="time" value="2">
+                        <label for="2">If I have to</label><br>
+                        <input class="checkmark" type="radio" id="time" name="time" value="3">
+                        <label for="3">Short distance only</label><br>
+                        <input class="checkmark" type="radio" id="time" name="time" value="4">
+                        <label for="4">Not really</label><br>
+                        <br> <br> <hr> <br>
+                        <h3>Which sports do you expect as this quiz's result?<br><br></h3>
+                        <img class="survey-img survey-img-left" src="https://wmc-ahif-2021.github.io/Go-Healthy/soccerball.472863b3.webp">
+                        <img class="survey-img" src="https://wmc-ahif-2021.github.io/Go-Healthy/basketball1.a03bb322.jpg"><br>
+                        <input class="radio-btn-survey checkmark" type="radio" id="sport" name="sport" value="1" checked="checked">
+                        <input class="radio-btn-survey checkmark" type="radio" id="sport" name="sport" value="2"><br>
+                        <img class="survey-img survey-img-left" src="https://wmc-ahif-2021.github.io/Go-Healthy/tennisball.2996b156.jpg">
+                        <img class="survey-img" src="https://wmc-ahif-2021.github.io/Go-Healthy/golfball.e4dcd8ba.jpg">
+                        <input class="radio-btn-survey checkmark" type="radio" id="sport" name="sport" value="3">
+                        <input class="radio-btn-survey checkmark" type="radio" id="sport" name="sport" value="4">
+                        <br> <br> <hr> <br>
+                        <h3>Do you like sports where you are able to handle a ball with your hand?<br><br></h3>
+                        <input class="checkmark" type="radio" id="statement" name="statement" value="1" checked="checked">
+                        <label for="1">I prefer playing a sport that focuses on my feet</label><br>
+                        <input class="checkmark" type="radio" id="statement" name="statement" value="2">
+                        <label for="2">Completely!</label><br>
+                        <input class="checkmark" type="radio" id="statement" name="statement" value="3">
+                        <label for="3">I enjoy playing with rackets</label><br>
+                        <input class="checkmark" type="radio" id="statement" name="statement" value="4">
+                        <label for="4">Yes and with a glove.</label><br>
+                        <br> <br> <hr> <br>
+
+                        <button id="submit" name="submit" class="btn btn-primary" style="padding-left: 12px;">Result</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            <script src="https://wmc-ahif-2021.github.io/Go-Healthy/Quiz/quiz.7359f0cc.js"></script>
+            <script type="text/javascript">var url = '../../';
+
+</script>
+        </body>
+
+</html>
+

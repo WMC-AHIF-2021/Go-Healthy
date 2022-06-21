@@ -1,0 +1,63 @@
+html{
+  background-image: linear-gradient(to bottom, #d6f5d6, #DFF2FD, #E9E1FC, #ffe5ec);
+  height: auto;
+  width: auto;
+}
+body{
+  background-image: linear-gradient(to bottom, #d6f5d6, #DFF2FD, #E9E1FC, #ffe5ec);
+  height: auto;
+  width: auto;
+}
+
+.header{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.column {
+  width: 30%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.row{
+  margin-left: 2.5%;
+}
+
+.card {
+  box-shadow: 0 0px 0px 0 rgb(252, 250, 250);
+}
+
+.about-section {
+  margin-top:5%;
+  text-align: center;
+  color: black;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.pictureAboutUs{
+    width: 80%;
+    display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10%;
+      margin-bottom: 10%;  
+}
+
+
